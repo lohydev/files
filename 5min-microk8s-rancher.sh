@@ -1,3 +1,5 @@
+sudo apt update
+sudo apt upgrade -y
 sudo snap install microk8s --classic --edge
 sudo microk8s.enable dns storage ingress helm
 sudo sh -c 'echo "--allow-privileged=true" >> /var/snap/microk8s/current/args/kube-apiserver'
