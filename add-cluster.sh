@@ -1,1 +1,0 @@
-sudo docker run -d --privileged --restart=unless-stopped --net=host -v /etc/kubernetes:/etc/kubernetes -v /var/run:/var/run rancher/rancher-agent:v2.4.5 --server https://10.251.55.77 --token twlnjrrgg5892d85mtxnbqdr94mhwq6q68vxxjp25g688phzgvgk48 --ca-checksum d29e349c464156c1a9dc0fedc0ed96320d8a0548d2dd6728b5bc6d59f979e353 --etcd --controlplane --worker

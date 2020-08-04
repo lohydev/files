@@ -4,6 +4,7 @@ sudo snap install microk8s --classic --edge
 sudo microk8s.enable dns storage ingress helm
 sudo sh -c 'echo "--allow-privileged=true" >> /var/snap/microk8s/current/args/kube-apiserver'
 sudo systemctl restart snap.microk8s.daemon-apiserver.service
+sleep 1m
 sudo microk8s.kubectl create serviceaccount tiller --namespace kube-system
 sudo microk8s.kubectl create clusterrolebinding tiller-cluster-rule --clusterrole=cluster-admin --serviceaccount=kube-system:tiller
 sudo microk8s.helm init --service-account=tiller
