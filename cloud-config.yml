@@ -1,0 +1,12 @@
+#cloud-config
+
+hostname: kl-rancheros
+
+rancher:
+  network:
+    interfaces:
+      eth*:
+        dhcp: true
+
+ssh_authorized_keys:
+  - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCcBTR35adPxAX66BgZeNpAD69V8M9gupLyafLMeOhgAdGeuKAG5Ky4QgNGsxPPvYHBMeVkOe9vzmJPV3/ccC+D+CCme7Y3pHFUssYe/FlGuCHR/2j8F26Sh/+uQU1f4UDfud5DFb5yYGPvLIcf5C5IW4I2p8avK/L13kVGAXbuOvh2877QKgyQuBmgUm5PqwiLf3bT+F5U5lwcNRLamrngNFl0QeWDHDysXb2eBsVly3fJ3LuW86bSdRJlYf8X+yTA60i/g2KoittAXfHkkrkBJoqLtZvjKzlb3yIUfLdsPwKdNUpafKNdnLVUNj0yu67/lFLYIi6qDLv8OdThcsjVe+MRBr4Yy4yh0WoYy46uCqvs/pvYZypvp4ziO1MG6Y4vmvXwMlg6x6sh745dypWrJmaMwC7tIgLsnH0/YhdbCbGnQb6rpYfoJdq6B4yy+96NhUx0SUoNT/4uJ0zZCTGGJqI194QbrNtpDeUfrxkJqw/MDPb0Br5MWP53TyvqVT0=
