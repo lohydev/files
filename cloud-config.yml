@@ -1,6 +1,6 @@
 #cloud-config
 
-hostname: kl-rancheros
+hostname: ug-rancher
 
 rancher:
   network:
