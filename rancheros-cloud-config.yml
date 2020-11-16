@@ -10,4 +10,3 @@ rancher:
     interfaces:
       eth*:
         dhcp: true
-  password: my-rancheros-password
