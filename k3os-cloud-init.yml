@@ -25,3 +25,5 @@ hostname: my-k3os-host
 k3os:
   token: super-secure-local-cluster-token
   password: my-k3os-password
+  k3s_args:
+  - server

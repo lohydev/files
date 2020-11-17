@@ -10,3 +10,10 @@ rancher:
     interfaces:
       eth*:
         dhcp: true
+  services:
+    rancher-server:
+      image: rancher/rancher:latest
+      restart: unless-stopped
+      ports:
+        - 80:80
+        - 443:443
