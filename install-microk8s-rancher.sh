@@ -16,4 +16,5 @@ sudo microk8s.helm3 install cert-manager jetstack/cert-manager --namespace cert-
 sleep 4m
 rancherHostname="${HOSTNAME}.local"
 sudo microk8s.helm3 install rancher rancher-latest/rancher --namespace cattle-system --set hostname=$rancherHostname
-sudo echo "127.0.0.1  ${rancherHostname}" >> /etc/hosts
+hostsLine="127.0.0.1\t$rancherHostname"
+sudo -- sh -c -e "echo '$hostsLine' >> /etc/hosts"
