@@ -6,7 +6,7 @@ ssh_authorized_keys:
 hostname: my-k3os-host
 
 k3os:
-  token: super-secure-local-cluster-token
+  token: 4ca2f812a2907c7cebec77cc
   password: my-k3os-password
   k3s_args:
   - server
