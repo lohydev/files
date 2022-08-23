@@ -14,8 +14,7 @@ rancher:
     rancher-server:
       image: rancher/rancher:latest
       restart: unless-stopped
-      command:
-      - --privileged
+      privileged: true
       ports:
         - 80:80
         - 443:443
