@@ -19,4 +19,4 @@ rancher:
         - 80:80
         - 443:443
       environment:
-        - CATTLE_BOOTSTRAP_PASSWORD: my-rancher-password
+        - "CATTLE_BOOTSTRAP_PASSWORD": "my-rancher-password"
