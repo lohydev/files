@@ -8,6 +8,6 @@ hostname: my-k3os-host
 k3os:
   token: kn4rpm.d1kl03iwr4t8bmm4
   password: my-k3os-password
+  server_url: https://my-main-master:6443
   k3s_args:
   - server
-  - "--cluster-init"
