@@ -9,6 +9,6 @@ ip_address=`echo $ip_address | sed 's/ *$//g'`
 sed -i "s/127.0.0.1/$ip_address/" kubeconfig
 
 upload_kubeconfig_url=$(curl --data "text=$(base64 kubeconfig)" https://file.io | grep -Eo '(http|https)://[a-zA-Z0-9./?=_%:-]*')
-echo "Please send this url to GV personnel: $upload_kubeconfig_url"
+echo "curl $upload_kubeconfig_url | base64 -d > config"
 
 rm -rf kubeconfig
