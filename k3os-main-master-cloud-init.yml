@@ -2,12 +2,15 @@
 
 ssh_authorized_keys:
   - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCrV5qXWu91sYSv8xuKmOGFJkomU3ly4JD1kySV/qS0z5K8Fog6jrZMebRpEQrGqgEoBFnlA1A0FZ8M+WHQf2n1JjnYZHRnNjnXrO2PiW1O8yRZgULuP5IHQaDI9Gbah7TwdJ7sYuvkE5oMYE1T/Tv8oK4kh1oQ8SME3gfIiZHh85raWKtS+3n0MGQrhRnwbAzk+0zwVL5p8P85inY9512j/XQhSLrALskXy4SPXV04jhRjMQcF1gBGhjIRlr7wskSfHgoWLyvtpSiuJ6TJ8cPD3UuzybOVvhGaRiI5TvGht1+1nuoXbmZv46ZiAe/0MUJJq0yy1PPTcZISff0ZgmoVpyAOtpWYrrIDeYM+NWTc7hK3jB4qeLmhTiEHR/cZlKvnPIU5+rrrrQO/xMlncogVTbohiqtOb6Vc4F6aYDU1oVMeD6WcIfPrnViGCBNHV2oDoS6EtwxmXYfHpChcN7ZOXQUwujdFSir/xMrUIidK7N//ItGK8eUIUjToCOARKl0= one\lohy@MYKUL1LT024
-
 hostname: my-k3os-host
+run_cmd:
+- "service ntpd start"
 
 k3os:
-  token: kn4rpm.d1kl03iwr4t8bmm4
+  ntp_servers:
+  - 0.time.google.com
   password: my-k3os-password
+  token: kn4rpm.d1kl03iwr4t8bmm4
   k3s_args:
   - server
   - "--cluster-init"
